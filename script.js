@@ -112,6 +112,7 @@
   const aiEditorSection = document.getElementById('aiEditorSection');
   const aiModelBadge = document.getElementById('aiModelBadge');
   const aiModelRequirements = document.getElementById('aiModelRequirements');
+  const aiRunBtn = document.getElementById('aiRunBtn');
   const aiCancelBtn = document.getElementById('aiCancelBtn');
   const aiRetryBtn = document.getElementById('aiRetryBtn');
   const aiDismissBtn = document.getElementById('aiDismissBtn');
