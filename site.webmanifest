@@ -4,13 +4,13 @@
   "description": "Private browser-based photo editor with filters, adjustments, text detection, branding, metadata cleanup, and social resizing.",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#5c72f9",
+  "background_color": "#f5f0df",
+  "theme_color": "#24203a",
   "icons": [
     {
-      "src": "./favicon.png?v=20260904.6",
+      "src": "./pixelroom-pixel-logo.svg?v=20260920.1",
       "sizes": "any",
-      "type": "image/png",
+      "type": "image/svg+xml",
       "purpose": "any maskable"
     }
   ]

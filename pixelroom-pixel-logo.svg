@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Pixelroomedit pixel logo</title>
+  <desc id="desc">A pixelated coral and yellow P mark</desc>
+  <rect width="64" height="64" fill="#24203a"/>
+  <rect x="12" y="10" width="8" height="8" fill="#ffb547"/>
+  <rect x="20" y="18" width="8" height="8" fill="#f05a65"/>
+  <rect x="28" y="10" width="8" height="8" fill="#ffb547"/>
+  <rect x="36" y="18" width="8" height="8" fill="#f05a65"/>
+  <rect x="12" y="26" width="8" height="28" fill="#f05a65"/>
+  <rect x="20" y="26" width="20" height="8" fill="#f05a65"/>
+  <rect x="40" y="34" width="8" height="10" fill="#f05a65"/>
+  <rect x="32" y="44" width="16" height="8" fill="#f05a65"/>
+  <rect x="20" y="34" width="8" height="8" fill="#24203a"/>
+</svg>

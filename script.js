@@ -811,21 +811,22 @@
 
   function paintDot(x,y){
     const r = Math.max(2, parseInt(brushSizeInput.value,10) / 2);
-    const gradient = maskCtx.createRadialGradient(x, y, 0, x, y, r);
-    gradient.addColorStop(0, 'rgba(255,60,60,0.64)');
-    gradient.addColorStop(0.58, 'rgba(255,60,60,0.42)');
-    gradient.addColorStop(0.86, 'rgba(255,60,60,0.18)');
-    gradient.addColorStop(1, 'rgba(255,60,60,0)');
-    if (tool === 'eraser'){
-      maskCtx.save();
-      maskCtx.globalCompositeOperation = 'destination-out';
-      maskCtx.fillStyle = gradient;
-      maskCtx.beginPath(); maskCtx.arc(x,y,r,0,Math.PI*2); maskCtx.fill();
-      maskCtx.restore();
-    } else {
-      maskCtx.fillStyle = gradient;
-      maskCtx.beginPath(); maskCtx.arc(x,y,r,0,Math.PI*2); maskCtx.fill();
+    const pixelSize = Math.max(4, Math.round(r / 4));
+    const left = Math.floor((x - r) / pixelSize) * pixelSize;
+    const top = Math.floor((y - r) / pixelSize) * pixelSize;
+    const right = Math.ceil((x + r) / pixelSize) * pixelSize;
+    const bottom = Math.ceil((y + r) / pixelSize) * pixelSize;
+    maskCtx.save();
+    if (tool === 'eraser') maskCtx.globalCompositeOperation = 'destination-out';
+    maskCtx.fillStyle = tool === 'eraser' ? 'rgba(0,0,0,1)' : 'rgba(255,60,60,0.64)';
+    for (let cellY = top; cellY < bottom; cellY += pixelSize){
+      for (let cellX = left; cellX < right; cellX += pixelSize){
+        const centerX = cellX + pixelSize / 2;
+        const centerY = cellY + pixelSize / 2;
+        if (Math.hypot(centerX - x, centerY - y) <= r) maskCtx.fillRect(cellX, cellY, pixelSize, pixelSize);
+      }
     }
+    maskCtx.restore();
   }
 
   function paintLine(x0,y0,x1,y1){

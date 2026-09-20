@@ -7,19 +7,19 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>Pixelroomedit — private image editor</title>
-<meta name="theme-color" content="#ffffff">
-<link rel="icon" type="image/png" href="favicon.png?v=20260904.6">
-<link rel="apple-touch-icon" href="favicon.png?v=20260904.6">
+<meta name="theme-color" content="#15132b">
+<link rel="icon" type="image/svg+xml" href="pixelroom-pixel-logo.svg?v=20260920.1">
+<link rel="apple-touch-icon" href="pixelroom-pixel-logo.svg?v=20260920.1">
 <link rel="manifest" href="site.webmanifest?v=20260904.2">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Pixelify+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20260904.2">
 </head>
 <body>
 
 <nav class="site-nav" aria-label="Main navigation">
-  <a class="nav-brand" href="#top"><img class="nav-mark" src="favicon.png?v=20260904.6" alt="">Pixelroomedit</a>
+  <a class="nav-brand" href="#top"><img class="nav-mark" src="pixelroom-pixel-logo.svg?v=20260920.1" alt="">Pixelroomedit</a>
   <div class="nav-links">
     <a href="#guide">How it works</a>
     <a href="privacy.html">Privacy</a>
@@ -28,17 +28,16 @@
 </nav>
 
 <header class="hero" id="top">
+  <div class="hero-kicker"><span class="pixel-dot"></span> PIXELROOM / LOCAL IMAGE LAB <span class="hero-version">v1.0</span></div>
   <div class="hero-chips" aria-hidden="true">
-    <span class="hero-chip">Remove objects</span>
-    <span class="hero-chip">Auto-detect text</span>
-    <span class="hero-chip">Filters and edits</span>
-    <span class="hero-chip">PNG branding</span>
-    <span class="hero-chip">Resize for social</span>
+    <span class="hero-chip">01 / Drop a photo</span>
+    <span class="hero-chip">02 / Make it yours</span>
+    <span class="hero-chip">03 / Export clean</span>
   </div>
   <p class="eyebrow">Private photo editor</p>
-  <h1>Edit photos <em>without the upload</em></h1>
-  <p class="sub">Remove unwanted details, apply filters, add branding, resize for social media, and export a clean copy — everything runs right here in your browser.</p>
-  <div class="privacy-pill"><span></span> Local only, nothing leaves your device</div>
+  <h1>Your photo editor, <em>with a little more play.</em></h1>
+  <p class="sub">Clean up, style, brand, resize, and export your images in one bright little studio. Everything runs right here in your browser.</p>
+  <div class="privacy-pill"><span></span> Local only / nothing leaves your device</div>
 </header>
 
 <main class="card" id="editor">
@@ -137,13 +136,9 @@
         <svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 0-2.6 5.9" fill="none"></path><polygon points="20,7 20,13 14,13" stroke="none" fill="var(--ink)"></polygon></svg>
       </button>
       <div class="zoom-group">
-        <button class="tool-btn small" id="zoomOut" title="Zoom out">
-          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"></line><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
-        </button>
+        <button class="tool-btn small zoom-step" id="zoomOut" title="Zoom out" aria-label="Zoom out"><span class="zoom-symbol" aria-hidden="true">−</span></button>
         <span class="zoom-label" id="zoomLabel">100%</span>
-        <button class="tool-btn small" id="zoomIn" title="Zoom in">
-          <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"></circle><line x1="7.5" y1="10.5" x2="13.5" y2="10.5"></line><line x1="10.5" y1="7.5" x2="10.5" y2="13.5"></line><line x1="15.5" y1="15.5" x2="20.5" y2="20.5"></line></svg>
-        </button>
+        <button class="tool-btn small zoom-step" id="zoomIn" title="Zoom in" aria-label="Zoom in"><span class="zoom-symbol" aria-hidden="true">+</span></button>
       </div>
     </div>
 
